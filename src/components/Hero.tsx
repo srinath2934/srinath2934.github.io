@@ -1,6 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ArrowRight, Github, FileText, Bot, Search, Terminal } from 'lucide-react';
+import { AgentFlowAnimation } from './AgentFlowAnimation';
 
 export const Hero: React.FC = () => {
   return (
@@ -163,6 +164,8 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
+        {/* Interactive Creative LangGraph Agent Flow Simulator */}
+        <AgentFlowAnimation />
       </div>
 
       <style>{`
