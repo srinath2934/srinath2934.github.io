@@ -83,7 +83,12 @@ export const Hero: React.FC = () => {
             <ArrowRight size={16} />
           </a>
 
-          <a href="#contact" className="btn btn-secondary" style={{ padding: '12px 20px', fontSize: '15px' }}>
+          <a
+            href="/Srinath_S_Resume.pdf"
+            download="Srinath_S_Resume.pdf"
+            className="btn btn-secondary"
+            style={{ padding: '12px 20px', fontSize: '15px' }}
+          >
             <FileText size={16} />
             <span>Download Resume</span>
           </a>

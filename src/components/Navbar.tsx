@@ -117,7 +117,8 @@ export const Navbar: React.FC = () => {
           </a>
 
           <a
-            href="#contact"
+            href="/Srinath_S_Resume.pdf"
+            download="Srinath_S_Resume.pdf"
             className="btn btn-secondary btn-sm"
             style={{ display: 'none' }}
             id="nav-resume-btn"
