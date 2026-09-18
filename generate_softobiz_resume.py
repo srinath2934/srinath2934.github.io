@@ -109,6 +109,7 @@ def generate_softobiz_style_resume(output_filename):
     contact_line = (
         "+91 7603967977 &nbsp;|&nbsp; "
         "srinath2934@gmail.com &nbsp;|&nbsp; "
+        "<a href='https://srinath2934.github.io' color='#1D4ED8'><u>Portfolio (srinath2934.github.io)</u></a> &nbsp;|&nbsp; "
         "<a href='https://linkedin.com/in/srinath29' color='#1D4ED8'><u>LinkedIn</u></a> &nbsp;|&nbsp; "
         "<a href='https://github.com/srinath2934' color='#1D4ED8'><u>GitHub</u></a> &nbsp;|&nbsp; "
         "Bengaluru, India"
