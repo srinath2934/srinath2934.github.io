@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   subheading: "I design and ship practical AI systems across multi-agent workflows, semantic search, RAG pipelines, and high-throughput ML backends. Focused on deterministic safety, context engineering, and measurable system reliability.",
   email: "srinath2934@gmail.com",
   phone: "+91 7603967977",
-  location: "Krishnagiri, Tamil Nadu, India",
+  location: "Bengaluru, Karnataka, India",
   github: "https://github.com/srinath2934",
   linkedin: "https://linkedin.com/in/srinath29",
   leetcode: "https://leetcode.com/u/srinath29",
