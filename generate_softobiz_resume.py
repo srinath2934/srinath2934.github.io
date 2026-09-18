@@ -109,7 +109,6 @@ def generate_softobiz_style_resume(output_filename):
     contact_line = (
         "+91 7603967977 &nbsp;|&nbsp; "
         "srinath2934@gmail.com &nbsp;|&nbsp; "
-        "<a href='https://srinath2934.github.io' color='#1D4ED8'><u>Portfolio (srinath2934.github.io)</u></a> &nbsp;|&nbsp; "
         "<a href='https://linkedin.com/in/srinath29' color='#1D4ED8'><u>LinkedIn</u></a> &nbsp;|&nbsp; "
         "<a href='https://github.com/srinath2934' color='#1D4ED8'><u>GitHub</u></a> &nbsp;|&nbsp; "
         "Bengaluru, India"
@@ -125,8 +124,7 @@ def generate_softobiz_style_resume(output_filename):
         "agentic AI, RAG, NLP, and computer-vision systems. Built <b>ClosePilot</b>, a stateful 7-node LangGraph workflow with typed state, "
         "checkpointer-based Human-in-the-Loop (HITL) interrupts, safe pause/resume, Claude integration through MCP, structured-output validation, "
         "and a 14/14 passing Pytest suite. Also built <b>RepoChat</b>, a LangChain and FAISS retrieval system with automated response evaluation and "
-        "LangSmith tracing. Comfortable with Python, async programming, typing, REST APIs, Git, and structured problem-solving, with a strong interest "
-        "in context engineering and reliable LLM applications."
+        "LangSmith tracing. Portfolio & live project demos: <a href='https://srinath2934.github.io' color='#1D4ED8'><u>srinath2934.github.io</u></a>."
     )
     story.append(Paragraph(summary_text, body_style))
     story.append(Spacer(1, 3))
