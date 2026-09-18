@@ -221,12 +221,11 @@ def generate_softobiz_style_resume(output_filename):
     story.append(HRFlowable(width="100%", thickness=0.8, color=colors.HexColor("#111827"), spaceBefore=1, spaceAfter=3))
 
     skills_lines = [
-        ("Context Engineering", "Layered context, context selectors and filters, token budgeting, summarisation/compaction, typed context schemas"),
-        ("CS & Programming", "Python (async, typing, OOP), Data Structures & Algorithms, clean/idiomatic code, Git/GitHub, Linux"),
-        ("Agent Orchestration", "LangGraph, state machines, checkpointers, HITL interrupts, branching/retries, multi-agent design, CrewAI (explored)"),
-        ("LLM & Retrieval", "Anthropic Claude, OpenAI, MCP, prompt engineering, tool calling, structured output, FAISS, embeddings, ChromaDB"),
-        ("Quality & Governance", "Pytest, LangSmith tracing, verification/validation patterns, grounded-output checks, auditability"),
-        ("Deployment & ML", "FastAPI, Docker, AWS EC2, PyTorch, CatBoost, SHAP, Sentence-BERT, SQL, YOLOv9, OpenCV")
+        ("Machine Learning & AML", "Supervised/Unsupervised Learning, Exploratory Data Analysis (EDA), Data Cleaning, Feature Engineering, Classification, Regression, CatBoost, scikit-learn, SHAP, Hyperparameter Tuning"),
+        ("Deep Learning & NLP", "PyTorch, Natural Language Processing (NLP), Sentence-BERT (SBERT), Vectorization, Tokenization & Chunking, Text Preprocessing, YOLOv9/v8, OpenCV, Multi-Head Architectures"),
+        ("LLMs & Retrieval (RAG)", "Large Language Models (LLMs), Claude, OpenAI, Groq LPU, RAG Pipelines, FAISS Vector Indexing, ChromaDB, BAAI/BGE Embeddings, Context Compaction, Token Budgeting, Citations"),
+        ("Agentic Orchestration", "LangGraph (v0.2+), State Machines, Typed State, Checkpointers, Human-in-the-Loop (HITL), MCP (Model Context Protocol), Tool Calling, Multi-Agent Workflows, CrewAI (explored)"),
+        ("Data Science & Systems", "Python 3.10+ (async, typing, OOP), SQL (PostgreSQL, SQLite, MySQL), pandas, NumPy, Data Structures & Algorithms, FastAPI, Docker, AWS EC2, LangSmith Tracing, Pytest")
     ]
     for label, val in skills_lines:
         story.append(Paragraph(f"<b>{label}</b> – {val}", body_style))

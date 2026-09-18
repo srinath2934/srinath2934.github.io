@@ -447,59 +447,87 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
+    category: "Machine Learning & Applied ML (AML)",
+    skills: [
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Exploratory Data Analysis (EDA)",
+      "Data Cleaning & Feature Engineering",
+      "Classification & Regression",
+      "CatBoost",
+      "scikit-learn",
+      "SHAP (Explainable AI)",
+      "Hyperparameter Tuning",
+      "Model Evaluation (ROC-AUC, F1, MAE)"
+    ]
+  },
+  {
+    category: "Deep Learning & NLP",
+    skills: [
+      "PyTorch",
+      "Natural Language Processing (NLP)",
+      "Sentence-Transformers (SBERT)",
+      "Tokenization & Subword Chunking",
+      "Vectorization & Dense Embeddings",
+      "Text Normalization & Preprocessing",
+      "YOLOv9 / YOLOv8 (Computer Vision)",
+      "OpenCV",
+      "Multi-Head Prediction"
+    ]
+  },
+  {
+    category: "LLMs, RAG & Retrieval Systems",
+    skills: [
+      "Large Language Models (LLMs)",
+      "Anthropic Claude",
+      "OpenAI GPT",
+      "Groq LPU / Llama 3.3",
+      "RAG Pipeline Architecture",
+      "FAISS Vector Indexing",
+      "ChromaDB",
+      "BAAI/BGE Embeddings",
+      "Prompt Engineering",
+      "Context Compaction & Token Budgeting",
+      "Exact Source Citation Grounding"
+    ]
+  },
+  {
     category: "Agentic AI & Orchestration",
     skills: [
       "LangGraph (v0.2+)",
-      "State Machines",
-      "Typed State Schemas",
-      "Checkpointers & Memory",
-      "Human-in-the-Loop (HITL) Gates",
-      "Branching & Safe Pause/Resume",
+      "State Machines & Typed State",
+      "Checkpointer Memory",
+      "Human-in-the-Loop (HITL) Interrupts",
+      "Safe Pause/Resume & Branching",
       "Model Context Protocol (MCP)",
-      "Multi-Agent Workflows",
+      "Multi-Agent Design",
       "CrewAI (Explored)"
     ]
   },
   {
-    category: "LLM, Retrieval & Context Engineering",
+    category: "Data Science & CS Fundamentals",
     skills: [
-      "Anthropic Claude",
-      "OpenAI API",
-      "Groq LPU / NVIDIA NIM",
-      "Prompt Engineering",
-      "Structured Output (Pydantic v2)",
-      "Sentence-Transformers (SBERT)",
-      "FAISS Vector Indexing",
-      "ChromaDB",
-      "BAAI/BGE Embeddings",
-      "Context Compaction & Token Budgeting"
-    ]
-  },
-  {
-    category: "Machine Learning & Data Science",
-    skills: [
-      "PyTorch",
-      "CatBoost",
-      "scikit-learn",
-      "SHAP (Explainable AI)",
-      "Multi-Task Classification",
-      "Time-to-Resolution Regression",
-      "SQL (PostgreSQL / SQLite)",
+      "Python 3.10+ (OOP, async/await, typing)",
+      "SQL (PostgreSQL, SQLite, MySQL)",
       "pandas",
-      "NumPy"
+      "NumPy",
+      "Data Structures & Algorithms (DSA)",
+      "Statistical Analysis & Data Preparation"
     ]
   },
   {
-    category: "Engineering, Production & Deployment",
+    category: "Production, Deployment & Observability",
     skills: [
-      "Python 3.10+ (async/await, typing, OOP)",
-      "FastAPI (RESTful APIs)",
+      "FastAPI (REST APIs)",
+      "Uvicorn",
       "Docker & Containerization",
-      "AWS EC2 Deployment",
-      "LangSmith Tracing & Observability",
+      "Docker Compose",
+      "AWS EC2",
+      "AWS S3",
+      "LangSmith Tracing & Telemetry",
       "Pytest (Unit & End-to-End)",
-      "React + Vite",
-      "Git / GitHub Workflows",
+      "Pydantic v2 Structured Output",
+      "Git / GitHub CI/CD",
       "Linux / Bash"
     ]
   }
