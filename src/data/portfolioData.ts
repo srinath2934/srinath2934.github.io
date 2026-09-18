@@ -447,24 +447,26 @@ export const CERTIFICATIONS: Certification[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    category: "Machine Learning & Applied ML (AML)",
+    category: "Machine Learning & Data Science",
     skills: [
-      "Supervised Learning",
-      "Unsupervised Learning",
-      "Exploratory Data Analysis (EDA)",
-      "Data Cleaning & Feature Engineering",
-      "Classification & Regression",
+      "PyTorch",
       "CatBoost",
       "scikit-learn",
       "SHAP (Explainable AI)",
-      "Hyperparameter Tuning",
-      "Model Evaluation (ROC-AUC, F1, MAE)"
+      "Multi-Task Classification",
+      "Time-to-Resolution Regression",
+      "SQL (PostgreSQL / SQLite)",
+      "pandas",
+      "NumPy",
+      "Supervised & Unsupervised Learning",
+      "Exploratory Data Analysis (EDA)",
+      "Data Cleaning & Feature Engineering",
+      "Hyperparameter Optimization"
     ]
   },
   {
     category: "Deep Learning & NLP",
     skills: [
-      "PyTorch",
       "Natural Language Processing (NLP)",
       "Sentence-Transformers (SBERT)",
       "Tokenization & Subword Chunking",
@@ -472,7 +474,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       "Text Normalization & Preprocessing",
       "YOLOv9 / YOLOv8 (Computer Vision)",
       "OpenCV",
-      "Multi-Head Prediction"
+      "Multi-Head Prediction Architectures"
     ]
   },
   {
