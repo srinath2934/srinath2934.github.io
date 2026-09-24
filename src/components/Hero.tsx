@@ -1,6 +1,6 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { ArrowRight, Github, FileText, Bot, Search, Terminal } from 'lucide-react';
+import { ArrowRight, Github, FileText, Bot, Search, Terminal, MessageCircle, Phone } from 'lucide-react';
 import { AgentFlowAnimation } from './AgentFlowAnimation';
 
 export const Hero: React.FC = () => {
@@ -8,15 +8,29 @@ export const Hero: React.FC = () => {
     <section style={{ paddingTop: '80px', paddingBottom: '70px', position: 'relative' }}>
       <div className="container">
         
-        {/* Top Status Pill */}
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '28px' }}>
+        {/* Top Status Pill & Direct Reachability */}
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '28px', flexWrap: 'wrap' }}>
           <div className="badge badge-live">
             <span className="status-dot"></span>
             <span>Available for AI / ML Engineer Roles</span>
           </div>
-          <span style={{ fontSize: '13px', color: 'var(--text-muted)', display: 'none' }} className="hero-loc">
+          <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
             · {PERSONAL_INFO.location}
           </span>
+          <a
+            href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, '')}`}
+            style={{
+              fontSize: '13px',
+              fontFamily: 'var(--font-mono)',
+              color: 'var(--text-secondary)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '5px'
+            }}
+          >
+            · <Phone size={12} style={{ color: 'var(--accent-hover)' }} />
+            <span>{PERSONAL_INFO.phone}</span>
+          </a>
         </div>
 
         {/* Primary Recruiter-First Headline */}
@@ -78,17 +92,34 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Direct Action Funnel */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
           <a href="#work" className="btn btn-primary" style={{ padding: '12px 22px', fontSize: '15px' }}>
             <span>View Selected Work</span>
             <ArrowRight size={16} />
           </a>
 
           <a
+            href={PERSONAL_INFO.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+            style={{
+              padding: '12px 18px',
+              fontSize: '15px',
+              color: '#10B981',
+              borderColor: 'rgba(16, 185, 129, 0.35)',
+              backgroundColor: 'rgba(16, 185, 129, 0.08)'
+            }}
+          >
+            <MessageCircle size={16} />
+            <span>Chat on WhatsApp</span>
+          </a>
+
+          <a
             href="/Srinath_S_Resume.pdf"
             download="Srinath_S_Resume.pdf"
             className="btn btn-secondary"
-            style={{ padding: '12px 20px', fontSize: '15px' }}
+            style={{ padding: '12px 18px', fontSize: '15px' }}
           >
             <FileText size={16} />
             <span>Download Resume</span>
@@ -99,7 +130,7 @@ export const Hero: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary"
-            style={{ padding: '12px 20px', fontSize: '15px' }}
+            style={{ padding: '12px 18px', fontSize: '15px' }}
           >
             <Github size={16} />
             <span>GitHub Profile</span>

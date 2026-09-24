@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SelectedWork } from './components/SelectedWork';
+import { AntiSlopAudit } from './components/AntiSlopAudit';
 import { RecruiterLetter } from './components/RecruiterLetter';
 import { EngineeringPhilosophy } from './components/EngineeringPhilosophy';
 import { TechStack } from './components/TechStack';
@@ -18,6 +19,7 @@ export const App: React.FC = () => {
       <main style={{ flex: 1 }}>
         <Hero />
         <SelectedWork />
+        <AntiSlopAudit />
         <RecruiterLetter />
         <TechStack />
         <EngineeringPhilosophy />

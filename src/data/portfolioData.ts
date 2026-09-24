@@ -7,11 +7,12 @@ export const PERSONAL_INFO = {
   subheading: "I design and ship practical AI systems across multi-agent workflows, semantic search, RAG pipelines, and high-throughput ML backends. Focused on deterministic safety, context engineering, and measurable system reliability.",
   email: "srinath2934@gmail.com",
   phone: "+91 7603967977",
+  whatsappUrl: "https://wa.me/917603967977?text=Hi%20Srinath%2C%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20connect%20regarding%20an%20AI%2FML%20role",
   location: "Bengaluru, Karnataka, India",
   github: "https://github.com/srinath2934",
   linkedin: "https://linkedin.com/in/srinath29",
   leetcode: "https://leetcode.com/u/srinath29",
-  resumeUrl: "#contact", // links to contact or direct download
+  resumeUrl: "/Srinath_S_Resume.pdf",
   currentlyBuilding: "Production-oriented multi-agent workflows with stateful checkpointers, MCP tooling, and context-compacted RAG architectures."
 };
 
@@ -84,7 +85,7 @@ export const PROJECTS: Project[] = [
         },
         {
           choice: "FastAPI with Pydantic Schema Validation",
-          why: "Guaranteed strict request/response data contracts, native async execution, and automatic OpenAPI documentation for seamless frontend integration."
+          why: "Guaranteed strict request/response data contracts, native async execution, and automatic OpenAPI documentation for type-safe frontend client generation."
         }
       ],
       implementationDetails: [
