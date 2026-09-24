@@ -1,153 +1,149 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { ArrowRight, Github, FileText, Bot, Search, Terminal, MessageCircle, Phone } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 import { AgentFlowAnimation } from './AgentFlowAnimation';
 
 export const Hero: React.FC = () => {
   return (
-    <section style={{ paddingTop: '80px', paddingBottom: '70px', position: 'relative' }}>
+    <section style={{ paddingTop: '72px', paddingBottom: '64px', position: 'relative' }}>
       <div className="container">
-        
-        {/* Top Status Pill & Direct Reachability */}
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', marginBottom: '28px', flexWrap: 'wrap' }}>
-          <div className="badge badge-live">
-            <span className="status-dot"></span>
-            <span>Available for AI / ML Engineer Roles</span>
-          </div>
-          <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
-            · {PERSONAL_INFO.location}
-          </span>
-          <a
-            href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, '')}`}
-            style={{
-              fontSize: '13px',
-              fontFamily: 'var(--font-mono)',
-              color: 'var(--text-secondary)',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '5px'
-            }}
-          >
-            · <Phone size={12} style={{ color: 'var(--accent-hover)' }} />
-            <span>{PERSONAL_INFO.phone}</span>
-          </a>
-        </div>
 
-        {/* Primary Recruiter-First Headline */}
-        <div style={{ maxWidth: '880px', marginBottom: '24px' }}>
-          <h1 style={{
-            fontSize: 'clamp(34px, 5.5vw, 56px)',
-            fontWeight: 800,
-            letterSpacing: '-0.035em',
-            lineHeight: 1.12,
-            marginBottom: '18px',
-            color: 'var(--text-primary)'
-          }}>
-            AI / ML Engineer building <span style={{ color: 'var(--accent-hover)' }}>production-oriented</span> AI systems.
-          </h1>
-
-          <p style={{
-            fontSize: 'clamp(16px, 2vw, 19px)',
-            lineHeight: 1.6,
-            color: 'var(--text-secondary)',
-            maxWidth: '740px'
-          }}>
-            {PERSONAL_INFO.subheading}
-          </p>
-        </div>
-
-        {/* Supporting Capability Badges */}
-        <div style={{
+        {/* Two-Column Hero: Text Left + Photo Right */}
+        <div className="hero-layout" style={{
           display: 'flex',
-          flexWrap: 'wrap',
-          gap: '8px',
-          marginBottom: '36px'
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '40px',
+          flexWrap: 'wrap'
         }}>
-          {[
-            { label: 'Stateful LangGraph Workflows', icon: <Bot size={13} /> },
-            { label: 'Model Context Protocol (MCP)', icon: <Terminal size={13} /> },
-            { label: 'RAG & Vector Retrieval', icon: <Search size={13} /> },
-            { label: 'FastAPI & PyTorch Deployment', icon: <Terminal size={13} /> },
-            { label: 'Deterministic Guardrails', icon: <Terminal size={13} /> }
-          ].map((tag, idx) => (
-            <div
-              key={idx}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '6px 12px',
-                borderRadius: '6px',
-                backgroundColor: 'var(--bg-card)',
-                border: '1px solid var(--border-card)',
-                fontSize: '13px',
-                fontFamily: 'var(--font-mono)',
-                color: 'var(--text-secondary)'
-              }}
-            >
-              <span style={{ color: 'var(--accent-hover)' }}>{tag.icon}</span>
-              <span>{tag.label}</span>
+
+          {/* Left: Text Content */}
+          <div style={{ flex: '1 1 520px', minWidth: '300px' }}>
+
+            {/* Top Status Pill */}
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '22px' }}>
+              <div className="badge badge-live">
+                <span className="status-dot"></span>
+                <span>Available for AI / ML Engineer Roles</span>
+              </div>
+              <span style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
+                · {PERSONAL_INFO.location}
+              </span>
             </div>
-          ))}
-        </div>
 
-        {/* Direct Action Funnel */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-          <a href="#work" className="btn btn-primary" style={{ padding: '12px 22px', fontSize: '15px' }}>
-            <span>View Selected Work</span>
-            <ArrowRight size={16} />
-          </a>
+            {/* Primary Headline */}
+            <h1 style={{
+              fontSize: 'clamp(30px, 4.4vw, 48px)',
+              fontWeight: 700,
+              letterSpacing: '-0.03em',
+              lineHeight: 1.15,
+              marginBottom: '18px',
+              color: 'var(--text-primary)'
+            }}>
+              AI / ML Engineer building <span style={{ color: 'var(--accent-hover)' }}>production-oriented</span> AI systems.
+            </h1>
 
-          <a
-            href={PERSONAL_INFO.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-            style={{
-              padding: '12px 18px',
-              fontSize: '15px',
-              color: '#10B981',
-              borderColor: 'rgba(16, 185, 129, 0.35)',
-              backgroundColor: 'rgba(16, 185, 129, 0.08)'
-            }}
-          >
-            <MessageCircle size={16} />
-            <span>Chat on WhatsApp</span>
-          </a>
+            <p style={{
+              fontSize: 'clamp(15px, 1.6vw, 17px)',
+              lineHeight: 1.6,
+              color: 'var(--text-secondary)',
+              maxWidth: '600px',
+              marginBottom: '28px'
+            }}>
+              {PERSONAL_INFO.subheading}
+            </p>
 
-          <a
-            href="/Srinath_S_Resume.pdf"
-            download="Srinath_S_Resume.pdf"
-            className="btn btn-secondary"
-            style={{ padding: '12px 18px', fontSize: '15px' }}
-          >
-            <FileText size={16} />
-            <span>Download Resume</span>
-          </a>
+            {/* Focused Action Buttons */}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
+              <a href="#work" className="btn btn-primary" style={{ padding: '11px 22px', fontSize: '14.5px' }}>
+                <span>View Selected Work</span>
+                <ArrowRight size={16} />
+              </a>
 
-          <a
-            href={PERSONAL_INFO.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-            style={{ padding: '12px 18px', fontSize: '15px' }}
-          >
-            <Github size={16} />
-            <span>GitHub Profile</span>
-          </a>
+              <a
+                href="/Srinath_S_Resume.pdf"
+                download="Srinath_S_Resume.pdf"
+                className="btn btn-secondary"
+                style={{ padding: '11px 20px', fontSize: '14.5px' }}
+              >
+                <FileText size={16} />
+                <span>Resume</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Compact Professional Photo */}
+          <div className="hero-photo-wrapper" style={{
+            flex: '0 0 auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '12px'
+          }}>
+            <div style={{
+              width: '180px',
+              height: '220px',
+              borderRadius: '12px',
+              overflow: 'hidden',
+              border: '1px solid var(--border-subtle)',
+              boxShadow: '0 6px 24px rgba(0,0,0,0.3)',
+              position: 'relative'
+            }}>
+              <img
+                src="/srinath-photo.jpg"
+                alt="Srinath S — AI / ML Engineer"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center top',
+                  display: 'block'
+                }}
+              />
+              <div style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: '40px',
+                background: 'linear-gradient(transparent, var(--bg-primary))',
+                pointerEvents: 'none'
+              }} />
+            </div>
+
+            {/* Name & Identity below photo */}
+            <div style={{ textAlign: 'center' }}>
+              <div style={{
+                fontSize: '14px',
+                fontWeight: 600,
+                color: 'var(--text-primary)',
+                letterSpacing: '-0.01em'
+              }}>
+                Srinath S
+              </div>
+              <div style={{
+                fontSize: '12px',
+                color: 'var(--text-muted)',
+                marginTop: '2px'
+              }}>
+                B.Tech AI & Data Science · 2026
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Recruiter Quick Fact Grid */}
         <div style={{
-          marginTop: '64px',
-          paddingTop: '32px',
+          marginTop: '52px',
+          paddingTop: '26px',
           borderTop: '1px solid var(--border-subtle)',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           gap: '24px'
         }}>
           <div>
-            <div style={{ fontSize: '12px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase' }}>
+            <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               FLAGSHIP SCALE
             </div>
             <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>
@@ -159,7 +155,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <div>
-            <div style={{ fontSize: '12px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase' }}>
+            <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               AGENT RELIABILITY
             </div>
             <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>
@@ -171,7 +167,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <div>
-            <div style={{ fontSize: '12px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase' }}>
+            <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               RETRIEVAL LATENCY
             </div>
             <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>
@@ -183,7 +179,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <div>
-            <div style={{ fontSize: '12px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase' }}>
+            <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               RESEARCH PUBLICATION
             </div>
             <div style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>
@@ -200,9 +196,14 @@ export const Hero: React.FC = () => {
       </div>
 
       <style>{`
-        @media (min-width: 640px) {
-          .hero-loc {
-            display: inline !important;
+        @media (max-width: 768px) {
+          .hero-photo-wrapper {
+            margin: 0 auto;
+          }
+        }
+        @media (min-width: 769px) {
+          .hero-layout {
+            flex-wrap: nowrap !important;
           }
         }
       `}</style>
