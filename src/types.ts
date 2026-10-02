@@ -4,6 +4,32 @@ export interface ProjectMetric {
   detail?: string;
 }
 
+export interface SchemaField {
+  stage: string;
+  field: string;
+  purpose: string;
+}
+
+export interface PipelineCategory {
+  sector: string;
+  leads: string;
+  companies: string[];
+  operationalBottleneck: string;
+}
+
+export interface DiagnosticCase {
+  client: string;
+  sector: string;
+  clientUrl?: string;
+  bottleneck: string;
+  solution: string;
+}
+
+export interface OutcomeItem {
+  title: string;
+  detail: string;
+}
+
 export interface CaseStudy {
   problem: string;
   constraints: string[];
@@ -13,6 +39,10 @@ export interface CaseStudy {
   evaluation: { task: string; metric: string; score: string; notes?: string }[];
   failureModesAndLimitations: string[];
   nextIterations: string[];
+  dataSchemaTable?: SchemaField[];
+  pipelineBreakdown?: PipelineCategory[];
+  diagnosticCaseStudies?: DiagnosticCase[];
+  tangibleOutcomes?: OutcomeItem[];
 }
 
 export interface Project {
@@ -24,8 +54,11 @@ export interface Project {
   badge?: string;
   technologies: string[];
   metrics: ProjectMetric[];
-  githubUrl: string;
+  githubUrl?: string;
   demoUrl?: string;
+  liveTrackerUrl?: string;
+  deliverableUrl?: string;
+  websiteUrl?: string;
   paperUrl?: string;
   isCenterpiece?: boolean;
   caseStudy?: CaseStudy;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PROJECTS } from '../data/portfolioData';
 import { Project } from '../types';
 import { CaseStudyModal } from './CaseStudyModal';
-import { Github, ExternalLink, ArrowUpRight, BookOpen, Layers } from 'lucide-react';
+import { Github, ExternalLink, ArrowUpRight, BookOpen, Layers, FileSpreadsheet, Presentation, Globe } from 'lucide-react';
 
 export const SelectedWork: React.FC = () => {
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<Project | null>(null);
@@ -63,17 +63,58 @@ export const SelectedWork: React.FC = () => {
                 </div>
 
                 {/* Direct Action Links */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-secondary btn-sm"
-                    aria-label={`${project.title} GitHub repository`}
-                  >
-                    <Github size={13} />
-                    <span>Source</span>
-                  </a>
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px' }}>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary btn-sm"
+                      aria-label={`${project.title} GitHub repository`}
+                    >
+                      <Github size={13} />
+                      <span>Source</span>
+                    </a>
+                  )}
+
+                  {project.liveTrackerUrl && (
+                    <a
+                      href={project.liveTrackerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary btn-sm"
+                    >
+                      <FileSpreadsheet size={13} />
+                      <span>Sprint Tracker</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
+
+                  {project.deliverableUrl && (
+                    <a
+                      href={project.deliverableUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary btn-sm"
+                    >
+                      <Presentation size={13} />
+                      <span>Proposal Deck</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
+
+                  {project.websiteUrl && (
+                    <a
+                      href={project.websiteUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary btn-sm"
+                    >
+                      <Globe size={13} />
+                      <span>Website</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
 
                   {project.demoUrl && (
                     <a

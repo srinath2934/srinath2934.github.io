@@ -113,8 +113,156 @@ export const PROJECTS: Project[] = [
     }
   },
   {
-    id: "closepilot",
+    id: "aincuru-sprint-tracker",
     number: "02",
+    title: "Aincuru — B2B Operational Intelligence & Client Sprint Tracker",
+    tagline: "Live diagnostic client acquisition engine transforming SME workflow bottlenecks into custom AI architecture pilots.",
+    shortDescription: "A structured 14-point operational discovery and sprint tracking engine managing 35+ verified B2B SME accounts across Travel, Accounting, and Garments, translating high-friction workflow leaks into validated AI architecture proposals.",
+    badge: "Live B2B Client Engine · 35+ Accounts",
+    technologies: [
+      "Operational Architecture",
+      "14-Point Data Schema",
+      "Process Diagnostics",
+      "Canva Proposal Architecture",
+      "NLP Call Intelligence",
+      "Multi-Channel Cadence",
+      "Google Sheets Engine"
+    ],
+    metrics: [
+      { label: "Verified B2B Accounts", value: "35+ SMEs", detail: "Across 3 South Indian verticals" },
+      { label: "Operational Schema", value: "14 Points", detail: "Discovery-to-POC data contract" },
+      { label: "Proposal Delivery", value: "< 2 Hours", detail: "Discovery to customized architecture" },
+      { label: "Transcript Grounding", value: "100%", detail: "Audit-ready verbatim call logs" }
+    ],
+    liveTrackerUrl: "https://docs.google.com/spreadsheets/d/1OHcLrRXRM6cXg1ZDZtJG7BUGbHcvcuRsJxj3mezF0e0/edit?authuser=1",
+    deliverableUrl: "https://canva.link/ofrwwku7du8p4jg",
+    websiteUrl: "https://www.aincuru.com/",
+    caseStudy: {
+      problem: "Most early-stage B2B outreach fails because teams pitch generic AI software without understanding where the prospect's workflow actually leaks time and revenue. Traditional sales CRMs only track pipeline stages (e.g., 'Contacted', 'Meeting Booked'), completely missing: (1) The operational root cause of the client's problem, (2) The specific software stack currently in use (e.g., Salesmate CRM, Tally, Bill.com), and (3) The diagnostic gap between what a customer complains about publicly vs. what staff manage internally. To solve this, I designed and deployed a structured Client Sprint Tracker that treats every prospect interaction as an operational discovery experiment rather than a cold pitch.",
+      constraints: [
+        "Zero-Generic Pitches: Every interaction must diagnose specific operational software friction before proposing any AI intervention.",
+        "Multi-Channel Cadence Discipline: Status, last touch, and scheduled follow-ups must be synchronized across phone, WhatsApp, and email.",
+        "Strict Auditability: 100% transcript grounding across all discovery calls for team review and NLP validation.",
+        "Rapid Proposal Turnaround: Discovery-to-proposal delivery time must be cut to under 2 hours by linking call takeaways directly to tailored slide frameworks."
+      ],
+      architectureDiagram: [
+        "SME Sourcing & Ingestion (TripAdvisor, Google Maps, LinkedIn, Export Registries)",
+        "         ↓",
+        "Context Logging (Company scale, branch footprint, verified leadership: CEOs/CAs/Ops Heads)",
+        "         ↓",
+        "Multi-Channel Cadence (Phone, WhatsApp, Email status synchronization)",
+        "         ↓",
+        "Diagnostic Discovery Call (Call Recording & Verbatim Transcript Logging)",
+        "         ↓",
+        "Structured Extraction across 14-Point Data Schema",
+        "  • Evidence Pain Points (Concurrent call drops, manual lead triage, multi-day filing delays)",
+        "  • Software Stack Identification (Salesmate CRM, Tally, Bill.com, WhatsApp Web)",
+        "  • Internal Evaluation Scoring (e.g., 7.5/10, 9/10 operational readiness)",
+        "         ↓",
+        "Tailored Technical Experiment Formulation (Intelligent lead routing, automated WhatsApp handoffs)",
+        "         ↓",
+        "Rapid Deliverable Synthesis: Custom Canva Proposal Architecture (< 2h Turnaround)",
+        "         ↓",
+        "Live Sprint Execution & Continuous Pipeline Audit (AINCURU - Client Sprint Tracker)"
+      ],
+      dataSchemaTable: [
+        { stage: "Ingestion", field: "Name & Where I found them", purpose: "Logs company identity and sourcing channel (TripAdvisor, Google Maps, LinkedIn, export registries)." },
+        { stage: "Pipeline Status", field: "Status, Last Touch, Follow-up Date", purpose: "Enforces disciplined multi-channel cadence across phone, WhatsApp, and email." },
+        { stage: "Context", field: "Notes", purpose: "Captures company scale, branch footprint, and verified leadership (CEOs, CAs, Operations Heads)." },
+        { stage: "Diagnostics", field: "evidence pain points", purpose: "Documents verified friction (e.g., concurrent call drops, manual lead triage, multi-day filing delays)." },
+        { stage: "Call Intelligence", field: "phone number & Transcript Summary", purpose: "Synthesizes discovery recordings into structured operational takeaways." },
+        { stage: "Solution Design", field: "Proposed Experiments", purpose: "Defines the specific technical pilot (e.g., intelligent lead routing, automated WhatsApp pre-trip handoffs)." },
+        { stage: "Commercials", field: "Client Requests & Action Items", purpose: "Tracks explicit prospect deliverables (customized Canva proposal, demo video, NDA)." },
+        { stage: "Closing Strategy", field: "Key Points & Recommendations", purpose: "Internal evaluation score (e.g., 7.5/10, 9/10) and tactical objection handling." },
+        { stage: "Audit Trail", field: "Raw Transcript", purpose: "Complete verbatim recording log for team review and NLP validation." }
+      ],
+      pipelineBreakdown: [
+        {
+          sector: "Travel & Experiential Outings",
+          leads: "16 Active Leads",
+          companies: ["Go Kite Travel", "Escape2Explore", "50+ Voyagers"],
+          operationalBottleneck: "Evaluated high-volume booking operations. Discovered that manual lead allocation in CRMs and post-booking pre-trip coordination across third-party transport/campsites are the primary drivers of customer complaints."
+        },
+        {
+          sector: "Accounting & CA Compliance",
+          leads: "5 Active Leads",
+          companies: ["Accounting to India", "Finanezy Solutions", "Sriraj & Associates"],
+          operationalBottleneck: "Investigated multi-client outsourcing firms. Pinpointed high-frequency manual portal data entry (GST, TDS, MCA) and client document intake as primary automation targets."
+        },
+        {
+          sector: "Textile & Garment Manufacturers",
+          leads: "15 Active Leads",
+          companies: ["Komadi Silks", "Ramesh Exports", "Sri Sarvalakshmi"],
+          operationalBottleneck: "Analyzed catalog sharing, order status tracking, and export documentation workflows across Tamil Nadu manufacturing clusters."
+        }
+      ],
+      diagnosticCaseStudies: [
+        {
+          client: "Go Kite Travel & Tours",
+          sector: "Travel Sector",
+          clientUrl: "https://gokitetours.com/",
+          bottleneck: "The manager stated that inquiries land in their CRM, but coordinators must manually read and allocate each lead to individual sales reps, delaying first-touch response times.",
+          solution: "Designed an automated routing agent that parses inquiry destination, budget, and urgency, auto-assigning leads in under 10 seconds."
+        },
+        {
+          client: "Escape2Explore",
+          sector: "Adventure Sector",
+          clientUrl: "https://www.escape2explore.com/",
+          bottleneck: "Sales reps using Salesmate CRM experience concurrent call overflow during peak booking hours, while post-booking pre-trip coordination requires constant manual follow-ups.",
+          solution: "Architected a non-disruptive layer surrounding Salesmate for real-time call overflow distribution and automated pre-trip WhatsApp packing/itinerary updates."
+        }
+      ],
+      technicalDecisions: [
+        {
+          choice: "Diagnostic Discovery Engine over Stage-Only CRMs",
+          why: "Traditional CRMs only record superficial pipeline stages ('Contacted', 'Meeting Scheduled'). Our 14-point schema captures software stacks, verified friction, and verbatim client quotes required to engineer viable AI pilots."
+        },
+        {
+          choice: "14-Point Synchronized Data Contract",
+          why: "Enforces end-to-end traceability from lead discovery to call audio transcripts, proposed technical experiments, and closing strategy with zero lost context."
+        },
+        {
+          choice: "Transcript-Grounded Proposal Synthesis",
+          why: "Quoting the client's verbatim operational words inside tailored slide frameworks establishes immediate technical trust and cuts proposal generation to under 2 hours."
+        }
+      ],
+      implementationDetails: [
+        "Architected and deployed the live AINCURU Client Sprint Tracker in Google Sheets, maintaining synchronized multi-channel cadences across 35+ verified B2B SME accounts.",
+        "Structured 14 synchronized data fields enforcing evidence pain point capture, software stack tracking, and internal readiness scoring (e.g., 7.5/10, 9/10).",
+        "Authored tailored B2B Client Proposal Architectures on Canva linking discovered bottlenecks directly to production AI system blueprints."
+      ],
+      tangibleOutcomes: [
+        {
+          title: "Evidence-Based Conversion",
+          detail: "Secured active proposal review stages with decision-makers by presenting custom Canva Proposal Architectures that mirror their exact operational words."
+        },
+        {
+          title: "Audit-Ready Pipeline",
+          detail: "Maintained 100% transcript grounding across all completed calls, eliminating lost context during team handoffs."
+        },
+        {
+          title: "Rapid Proposal Turnaround",
+          detail: "Cut discovery-to-proposal delivery time from multiple days to under 2 hours by linking call summaries directly to tailored slide frameworks."
+        }
+      ],
+      evaluation: [
+        { task: "Discovery-to-Proposal Delivery", metric: "Turnaround Time", score: "< 2 Hours", notes: "From completed discovery call to tailored Canva proposal architecture" },
+        { task: "Call Transcript Grounding", metric: "Auditability", score: "100%", notes: "All active opportunities backed by verbatim call recording summaries" },
+        { task: "Pipeline Account Scale", metric: "Verified SMEs", score: "35+ Accounts", notes: "Across Travel, Accounting, and Garments verticals" }
+      ],
+      failureModesAndLimitations: [
+        "Manual context entry fatigue when operators switch between spreadsheets and VoIP dialers.",
+        "Audio quality variability on cellular calls in industrial manufacturing clusters requiring manual transcript review."
+      ],
+      nextIterations: [
+        "Integrate automated Whisper API speech-to-text pipeline to auto-populate the 14 schema fields directly from call audio.",
+        "Deploy automated WhatsApp follow-up webhook triggers directly from the tracker sheet based on follow-up timestamps."
+      ]
+    }
+  },
+  {
+    id: "closepilot",
+    number: "03",
     title: "ClosePilot — Enterprise Multi-Agent AI Sales Copilot",
     tagline: "Autonomous CRM investigation, deterministic deal prioritization, and Human-in-the-Loop verified execution.",
     shortDescription: "A stateful 7-node LangGraph multi-agent copilot that audits live HubSpot CRM pipelines, scores deals using a zero-hallucination mathematical formula, reasons over deal blockers with Claude/NVIDIA LLMs, and pauses at a Human-in-the-Loop gate before executing CRM writes.",
@@ -207,7 +355,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "repo-chat",
-    number: "03",
+    number: "04",
     title: "RepoChat — Semantic Repository Intelligence System",
     tagline: "Enterprise-grade RAG engine for querying large GitHub codebases with exact source citations.",
     shortDescription: "A context-engineered Retrieval-Augmented Generation system enabling developers to semantically explore, debug, and understand large codebases through natural language, benchmarked on 1,000+ files with sub-300ms retrieval and citations.",
@@ -289,7 +437,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "redrob-ranking",
-    number: "04",
+    number: "05",
     title: "Redrob — Intelligent Candidate Ranking Engine",
     tagline: "Offline CPU-only hybrid candidate ranking screening 100k profiles in under 8 seconds.",
     shortDescription: "A high-throughput recruitment search engine that precomputes dense candidate representations with BAAI/BGE embeddings and ranks the top 100 profiles from a 100,000-candidate pool with deterministic score breakdowns.",
