@@ -7,6 +7,8 @@ on:
       - 'index.html'
       - 'assets/**'
       - '.nojekyll'
+      - '**.pdf'
+      - 'srinath-photo.jpg'
   workflow_dispatch:
 
 permissions:
@@ -31,12 +33,12 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Copy built files to root
+      - name: Copy built files to repo root
         run: |
           cp dist/index.html ./index.html
           rm -rf assets
           cp -r dist/assets ./assets
-          # Copy any other public files that vite outputs
+          # Copy any other top-level public output (photos, pdfs, etc.)
           for f in dist/*; do
             fname=$(basename "$f")
             if [[ "$fname" != "assets" && "$fname" != "index.html" ]]; then
@@ -50,7 +52,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html assets/ .nojekyll -f
-          # Add public files (photo, resume PDFs)
           git add srinath-photo.jpg Srinath_S_Resume.pdf Srinath_S_AI_ML_Engineer_Resume.pdf 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: deploy built site [skip ci]"
-          git push
+          # Only commit if there are actual changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "deploy: update built site assets"
+            git push
+          fi
