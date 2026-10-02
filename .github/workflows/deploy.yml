@@ -1,21 +1,21 @@
-name: Build and Deploy to Main
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - 'index.html'
-      - 'assets/**'
-      - '.nojekyll'
-      - '**.pdf'
-      - 'srinath-photo.jpg'
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,30 +33,18 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Copy built files to repo root
-        run: |
-          cp dist/index.html ./index.html
-          rm -rf assets
-          cp -r dist/assets ./assets
-          # Copy any other top-level public output (photos, pdfs, etc.)
-          for f in dist/*; do
-            fname=$(basename "$f")
-            if [[ "$fname" != "assets" && "$fname" != "index.html" ]]; then
-              cp -r "$f" "./$fname"
-            fi
-          done
-          touch .nojekyll
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
-      - name: Commit and push built files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html assets/ .nojekyll -f
-          git add srinath-photo.jpg Srinath_S_Resume.pdf Srinath_S_AI_ML_Engineer_Resume.pdf 2>/dev/null || true
-          # Only commit if there are actual changes
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "deploy: update built site assets"
-            git push
-          fi
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
